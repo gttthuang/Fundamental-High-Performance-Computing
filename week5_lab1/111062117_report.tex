@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[a4paper, margin=1in]{geometry}
+\setlength{\parindent}{0pt}
+
+\title{Week5 Lab1 Report}
+\author{111062117, Hsiang-Sheng Huang}
+
+\begin{document}
+
+\maketitle
+
+\section*{What command you use to build your program? build the library?}
+\begin{lstlisting}[language=bash, basicstyle=\ttfamily\small, numbers=left, numberstyle=\tiny\color{gray}, stepnumber=1, frame=single]
+$ make all
+\end{lstlisting}
+
+In the Makefile, it will build the executable and the staic library and the shared library. So after we make, we will have: \texttt{libmerge\_sort.a}, and \texttt{libmerge\_sort.so}, which are the static and shared libraries respectively.
+
+\section*{What command you use to run the executable? environment variables?}
+\begin{lstlisting}[language=bash, basicstyle=\ttfamily\small, numbers=left, numberstyle=\tiny\color{gray}, stepnumber=1, frame=single]
+$ ./merge_sort_static
+$ LD_LIBRARY_PATH=. ./merge_sort_shared.elf
+\end{lstlisting}
+
+The first command runs the executable built from the static library. The second command sets the \texttt{LD\_LIBRARY\_PATH} environment variable to the current directory, which allows the dynamic linker to find the shared library when running the executable built from the shared library.
+
+\end{document}
