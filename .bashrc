@@ -125,3 +125,6 @@ source /opt/lmod/lmod/init/bash
 
 # For Intel OneAPI
 source /opt/intel/oneapi/setvars.sh
+
+# For GROMACS
+source /home/scteam01/gromacs-2025.1-mpi/bin/GMXRC
